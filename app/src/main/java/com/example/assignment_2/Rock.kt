@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.assignment_2.RockRequest.RockRequestApi
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,9 +20,15 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class Rock : Fragment() {
-    // TODO: Rename and change types of parameters
+
     private var param1: String? = null
     private var param2: String? = null
+
+//    private val retrofit = Retrofit.Builder().baseUrl("https://itunes.apple.com/search?term=rock&amp;amp;media=music&amp;amp;entity=song&amp;amp;limit=50")
+//        .addConverterFactory(GsonConverterFactory.create())
+//        .build()
+//    private val postsApi = retrofit.create(RockRequestApi::class.java)
+//    private val response = postsApi.getAllPosts()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
